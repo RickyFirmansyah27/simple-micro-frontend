@@ -13,23 +13,29 @@ module.exports = {
     port: 3000,
   },
   module: {
-    rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: "babel-loader"
-      }
-    }
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ]
   },
   plugins: [
     htmlPlugin,
     new ModuleFederationPlugin({
-      name: "MicroFrontend",
+      name: "feature",
       filename: "remoteEntry.js",
       exposes: {
         "./Button": "./src/Button",
-        "./App": "./src/App"
+        "./App": "./src/App",
+        "./Menu": "./src/Menu"
       },
       shared: { react: { singleton: true, eager: true }, "react-dom": { singleton: true, eager: true } },
     })

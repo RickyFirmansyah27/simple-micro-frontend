@@ -1,5 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const {ModuleFederationPlugin} = require("webpack").container;
+const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -11,8 +11,8 @@ module.exports = {
   devServer: {
     static: path.join(__dirname, "dist"),
     port: 3001,
-    historyApiFallback:{
-      index:'/public/index.html'
+    historyApiFallback: {
+      index: '/public/index.html'
     },
   },
   module: {
@@ -22,19 +22,21 @@ module.exports = {
       use: {
         loader: "babel-loader"
       }
-    }
+    },
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
+    },
     ]
   },
   plugins: [
     htmlPlugin,
     new ModuleFederationPlugin({
-      name: "Host",
+      name: "shell_app",
       filename: "remoteEntry.js",
       remotes: {
-        MicroFrontend: "MicroFrontend@http://localhost:3000/remoteEntry.js"
+        feature: "feature@http://localhost:3000/remoteEntry.js"
       }
     })
   ]
 };
-
-// Checkout: "Checkout@http://localhost:3000/remoteEntry.js"
