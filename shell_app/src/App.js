@@ -2,9 +2,9 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Menu = lazy(() => import('./feature/Menu'));
-const Feature1 = lazy(() => import('./feature/feature1'));
-const Feature2 = lazy(() => import('./feature/feature2'));
-const Feature3 = lazy(() => import('./feature/feature3'));
+const Feature1 = lazy(() => import('./feature/Feature1'));
+const Feature2 = lazy(() => import('./feature/Feature2'));
+const Feature3 = lazy(() => import('./feature/Feature3'));
 
 
 const LoadingFallback = () => (
