@@ -1,5 +1,5 @@
 import React from 'react'
-const Menu = React.lazy(() => import('feature/Menu'))
+const Menu = React.lazy(() => import('feature/Feature1'))
 
 export default function App() {
   return (
