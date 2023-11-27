@@ -35,7 +35,10 @@ module.exports = {
       exposes: {
         "./Button": "./src/Button",
         "./App": "./src/App",
-        "./Menu": "./src/Menu"
+        "./Menu": "./src/Menu",
+        "./Feature1": "./src/Feature1",
+        "./Feature2": "./src/Feature2",
+        "./Feature3": "./src/Feature3"
       },
       shared: { react: { singleton: true, eager: true }, "react-dom": { singleton: true, eager: true } },
     })
