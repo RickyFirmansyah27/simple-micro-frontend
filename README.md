@@ -7,3 +7,6 @@ Example Micro Frontend using Module Federation
 
 #### Micro
 - https://simple-micro-frontend-menu.vercel.app
+
+### Command Config
+- npx webpack --config webpack.config.js
