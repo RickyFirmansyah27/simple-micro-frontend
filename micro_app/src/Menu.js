@@ -1,14 +1,20 @@
 import React from 'react';
-import './App.css';
+import { Link } from 'react-router-dom';
 
 export default function Menu() {
   return (
     <div>
       <h2>Feature Menu</h2>
       <ul>
-        <li>Feature 1</li>
-        <li>Feature 2</li>
-        <li>Feature 3</li>
+        <li>
+          <Link to="/feature1">Feature 1</Link>
+        </li>
+        <li>
+          <Link to="/feature2">Feature 2</Link>
+        </li>
+        <li>
+          <Link to="/feature3">Feature 3</Link>
+        </li>
       </ul>
     </div>
   );
