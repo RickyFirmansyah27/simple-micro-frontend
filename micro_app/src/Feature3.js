@@ -10,7 +10,7 @@ const styles = {
   },
   label: {
     fontFamily: 'Poppins',
-    fontSize: '12px',
+    fontSize: '18px',
     fontWeight: '500',
     lineHeight: '18px',
     letterSpacing: '0em',
@@ -29,7 +29,7 @@ const styles = {
   characterCount: {
     position: 'relative',
     bottom: 0,
-    left: 530,
+    left: 520,
     marginTop: '8px',
     color: '#666',
   },
@@ -47,7 +47,7 @@ function TextArea() {
 
   const handleChange = (event) => {
     const newText = event.target.value;
-    if (newText.length <= maxCharacters) {
+    if (newText.length < maxCharacters) {
       setText(newText);
       setError(false);
     } else {
