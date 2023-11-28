@@ -23,24 +23,28 @@ const styles = {
     padding: '10px',
     fontSize: '16px',
     borderRadius: '4px',
-    border: '2px solid #ccc',
+    border: '1.5px solid #ccc',
     outline: 'none',
     '&:focus': {
       borderColor: '#87CEEB',
+      outline: '2px solid #87CEEB',
     },
     resize: 'vertical',
   },
   characterCount: {
+    fontFamily: 'Poppins',
+    fontSize: '12px',
+    fontWeight: '400',
     position: 'absolute',
     bottom: 0,
     left: '520px',
-    marginTop: '8px',
-    color: '#666',
+    color: '#333333',
   },
   errorText: {
+    fontFamily: 'Poppins',
     color: 'red',
     fontSize: '12px',
-    marginTop: '4px',
+    lineHeight: '18px',
     position: 'absolute',
     bottom: 0,
     left: '10px',
@@ -50,7 +54,7 @@ const styles = {
 function TextArea() {
   const [text, setText] = useState('');
   const [error, setError] = useState(false);
-  const maxCharacters = 200;
+  const maxCharacters = 201;
 
   const handleChange = (event) => {
     const newText = event.target.value;
@@ -66,7 +70,7 @@ function TextArea() {
     <div style={styles.textAreaWrapper}>
       <h2 style={styles.label}>Label</h2>
       <textarea
-        style={{ ...styles.textArea, borderColor: error ? 'red' : '#87CEEB' }}
+        style={{ ...styles.textArea, borderColor: error ? 'red' : '#ccc' }}
         placeholder="Placeholder"
         value={text}
         onChange={handleChange}
@@ -75,7 +79,7 @@ function TextArea() {
       <div style={{marginTop: '20px'}}>
         {error && <div style={styles.errorText}>Error Label</div>}
         <div style={styles.characterCount}>
-          {text.length}/{maxCharacters}
+          {text.length}/200
         </div>
       </div>
     </div>
