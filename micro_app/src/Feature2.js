@@ -6,9 +6,9 @@ function Feature2() {
     <div>
       <h2>Feature 2</h2>
       <ul>
-        <li>Buku</li>
-        <li>Tas</li>
-        <li>Pena</li>
+        <li>Sepeda</li>
+        <li>Mobil</li>
+        <li>Pesawat</li>
       </ul>
     </div>
   );
