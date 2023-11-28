@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 
 const styles = {
   textAreaWrapper: {
@@ -7,6 +6,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
+    position: 'relative',
   },
   label: {
     fontFamily: 'Poppins',
@@ -23,13 +23,17 @@ const styles = {
     padding: '10px',
     fontSize: '16px',
     borderRadius: '4px',
-    border: '1px solid #ccc',
+    border: '2px solid #ccc',
+    outline: 'none',
+    '&:focus': {
+      borderColor: '#87CEEB',
+    },
     resize: 'vertical',
   },
   characterCount: {
-    position: 'relative',
+    position: 'absolute',
     bottom: 0,
-    left: 520,
+    left: '520px',
     marginTop: '8px',
     color: '#666',
   },
@@ -37,6 +41,9 @@ const styles = {
     color: 'red',
     fontSize: '12px',
     marginTop: '4px',
+    position: 'absolute',
+    bottom: 0,
+    left: '10px',
   },
 };
 
@@ -59,15 +66,17 @@ function TextArea() {
     <div style={styles.textAreaWrapper}>
       <h2 style={styles.label}>Label</h2>
       <textarea
-        style={{ ...styles.textArea, borderColor: error ? 'red' : '#ccc' }}
+        style={{ ...styles.textArea, borderColor: error ? 'red' : '#87CEEB' }}
         placeholder="Placeholder"
         value={text}
         onChange={handleChange}
         maxLength={maxCharacters}
       />
-      {error && <div style={styles.errorText}>Erorr Label</div>}
-      <div style={styles.characterCount}>
-        {text.length}/{maxCharacters}
+      <div style={{marginTop: '20px'}}>
+        {error && <div style={styles.errorText}>Error Label</div>}
+        <div style={styles.characterCount}>
+          {text.length}/{maxCharacters}
+        </div>
       </div>
     </div>
   );
