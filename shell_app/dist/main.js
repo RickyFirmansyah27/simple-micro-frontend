@@ -16,7 +16,7 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ App)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nconst Menu = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().lazy(() => __webpack_require__.e(/*! import() */ \"webpack_container_remote_feature_Feature1\").then(__webpack_require__.t.bind(__webpack_require__, /*! feature/Feature1 */ \"webpack/container/remote/feature/Feature1\", 23)));\nfunction App() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    style: {\n      fontSize: '20px'\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", null, \"Shell App\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Menu, null)));\n}\n\n//# sourceURL=webpack://shell_app/./src/App.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ App)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nconst Feature1 = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.lazy)(() => __webpack_require__.e(/*! import() */ \"webpack_container_remote_feature_Feature1\").then(__webpack_require__.t.bind(__webpack_require__, /*! feature/Feature1 */ \"webpack/container/remote/feature/Feature1\", 23)));\nconst Feature2 = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.lazy)(() => __webpack_require__.e(/*! import() */ \"webpack_container_remote_feature_Feature2\").then(__webpack_require__.t.bind(__webpack_require__, /*! feature/Feature2 */ \"webpack/container/remote/feature/Feature2\", 23)));\nconst Feature3 = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.lazy)(() => __webpack_require__.e(/*! import() */ \"webpack_container_remote_feature_Feature3\").then(__webpack_require__.t.bind(__webpack_require__, /*! feature/Feature3 */ \"webpack/container/remote/feature/Feature3\", 23)));\nfunction App() {\n  const [activeTab, setActiveTab] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1);\n  const renderTab = () => {\n    switch (activeTab) {\n      case 1:\n        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Feature1, null);\n      case 2:\n        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Feature2, null);\n      case 3:\n        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Feature3, null);\n      default:\n        return null;\n    }\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    style: {\n      fontSize: '20px'\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", null, \"Shell App\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", {\n    onClick: () => setActiveTab(1)\n  }, \"Feature 1\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", {\n    onClick: () => setActiveTab(2)\n  }, \"Feature 2\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", {\n    onClick: () => setActiveTab(3)\n  }, \"Feature 3\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {\n    fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Loading...\")\n  }, renderTab())));\n}\n\n//# sourceURL=webpack://shell_app/./src/App.js?");
 
 /***/ }),
 
@@ -319,12 +319,28 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		var chunkMapping = {
 /******/ 			"webpack_container_remote_feature_Feature1": [
 /******/ 				"webpack/container/remote/feature/Feature1"
+/******/ 			],
+/******/ 			"webpack_container_remote_feature_Feature2": [
+/******/ 				"webpack/container/remote/feature/Feature2"
+/******/ 			],
+/******/ 			"webpack_container_remote_feature_Feature3": [
+/******/ 				"webpack/container/remote/feature/Feature3"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
 /******/ 			"webpack/container/remote/feature/Feature1": [
 /******/ 				"default",
 /******/ 				"./Feature1",
+/******/ 				"webpack/container/reference/feature"
+/******/ 			],
+/******/ 			"webpack/container/remote/feature/Feature2": [
+/******/ 				"default",
+/******/ 				"./Feature2",
+/******/ 				"webpack/container/reference/feature"
+/******/ 			],
+/******/ 			"webpack/container/remote/feature/Feature3": [
+/******/ 				"default",
+/******/ 				"./Feature3",
 /******/ 				"webpack/container/reference/feature"
 /******/ 			]
 /******/ 		};
