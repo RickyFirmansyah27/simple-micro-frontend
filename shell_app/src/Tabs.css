@@ -1,0 +1,30 @@
+/* Tabs.css */
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.tabList {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.tabItem {
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+}
+
+.tabItemActive {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.tabItemInactive {
+  color: #333;
+}

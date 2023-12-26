@@ -1,23 +1,35 @@
 import React, { useState, lazy, Suspense } from 'react';
 import './App.css';
+import Tabs from './Tabs';
+
 const Feature1 = lazy(() => import('feature/Feature1'));
 const Feature2 = lazy(() => import('feature/Feature2'));
 const Feature3 = lazy(() => import('feature/Feature3'));
 
+const TABS = {
+  Feature1: { text: 'Feature1' },
+  'Feature2': { text: 'Feature2' },
+  'Feature3': { text: 'Feature3' },
+};
+
 export default function App() {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(Object.keys(TABS)[0]);
 
   const renderTab = () => {
     switch (activeTab) {
-      case 1:
+      case 'Feature1':
         return <Feature1 />;
-      case 2:
+      case 'Feature2':
         return <Feature2 />;
-      case 3:
+      case 'Feature3':
         return <Feature3 />;
       default:
         return null;
     }
+  };
+
+  const handleTabSelect = (tabKey) => {
+    setActiveTab(tabKey);
   };
 
   return (
@@ -25,12 +37,8 @@ export default function App() {
       <div style={{ fontSize: '20px' }}>
         <h2>Shell App</h2>
       </div>
+      <Tabs tabs={TABS} onSelect={handleTabSelect} />
       <div>
-        <div className="tab-buttons">
-          <button className={activeTab === 1 ? 'active' : ''} onClick={() => setActiveTab(1)}>Feature 1</button>
-          <button className={activeTab === 2 ? 'active' : ''} onClick={() => setActiveTab(2)}>Feature 2</button>
-          <button className={activeTab === 3 ? 'active' : ''} onClick={() => setActiveTab(3)}>Feature 3</button>
-        </div>
         <Suspense fallback={<div>Loading...</div>}>
           {renderTab()}
         </Suspense>

@@ -22,3 +22,30 @@
     color: white;
   }
   
+
+  .tabContainer {
+    display: flex;
+  }
+  
+  .tabButton {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #333; /* Default text color */
+  }
+  
+  .tabButtonActive {
+    border-bottom: 2px solid #007BFF; /* Blue underline for active tab */
+    color: #007BFF; /* Blue text color for active tab */
+  }
+  
+  .tabButtonInactive {
+    color: #999; /* Gray text color for inactive tabs */
+  }
