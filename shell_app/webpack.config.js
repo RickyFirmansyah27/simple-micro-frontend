@@ -46,6 +46,8 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         feature: "feature@https://simple-micro-frontend-menu.vercel.app/remoteEntry.js"
+        // feature: "feature@http://localhost:3000/remoteEntry.js",
+
       }
     })
   ]
